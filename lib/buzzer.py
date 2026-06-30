@@ -1,6 +1,7 @@
 import time
 from machine import Pin, PWM
 
+
 class Buzzer:
     SILENT = 0
     VOLUME = 512

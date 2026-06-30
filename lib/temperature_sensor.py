@@ -1,6 +1,7 @@
 import dht
 from machine import Pin
 
+
 class TemperatureSensor:
     def __init__(self, data_pin):
         self._sensor = dht.DHT22(Pin(data_pin))

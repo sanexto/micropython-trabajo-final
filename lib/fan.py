@@ -1,5 +1,6 @@
 from machine import Pin, PWM
 
+
 class Fan:
     MIN_SPEED = 0
     MAX_SPEED = 1023

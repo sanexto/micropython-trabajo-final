@@ -1,5 +1,6 @@
 from machine import ADC, Pin
 
+
 class GasSensor:
     def __init__(self, analog_pin):
         self._adc = ADC(Pin(analog_pin))
