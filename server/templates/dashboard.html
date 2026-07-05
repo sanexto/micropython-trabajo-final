@@ -1,0 +1,78 @@
+{% include 'header.html' %}
+
+    <div class="container py-4">
+        <div class="row g-4 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h6 class="text-muted">Temperatura</h6>
+                        <p class="display-6 mb-0"><span id="temperature">--</span> &deg;C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h6 class="text-muted">Humedad</h6>
+                        <p class="display-6 mb-0"><span id="humidity">--</span> %</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h6 class="text-muted">Gas</h6>
+                        <p class="display-6 mb-0"><span id="gas_value">--</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h6 class="text-muted">Ventilador</h6>
+                        <p class="display-6 mb-0">
+                            <span id="fan_on" class="badge bg-secondary">OFF</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="text-muted mb-3">Temperatura (&deg;C)</h6>
+                        <div style="position: relative; height: 220px;">
+                            <canvas id="temperatureChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="text-muted mb-3">Humedad (%)</h6>
+                        <div style="position: relative; height: 220px;">
+                            <canvas id="humidityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="text-muted mb-3">Gas</h6>
+                        <div style="position: relative; height: 220px;">
+                            <canvas id="gasChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="/static/dashboard.js"></script>
+
+{% include 'footer.html' %}
